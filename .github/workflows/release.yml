@@ -34,14 +34,14 @@ jobs:
 
       - name: Rename files
         run: |
-          mv UIKitLivePreview.zip UIKitLivePreview.kush.zip
-          mv UIKitLivePreview.sha256 UIKitLivePreview.kush.sha256
+          mv UIKitLivePreview.zip UIKitLivePreview.kusha.zip
+          mv UIKitLivePreview.sha256 UIKitLivePreview.kusha.sha256
 
       - name: Upload XCFramework archive
         uses: softprops/action-gh-release@v1
         with:
           files: |
-            UIKitLivePreview.kush.zip
-            UIKitLivePreview.kush.sha256
+            UIKitLivePreview.kusha.zip
+            UIKitLivePreview.kusha.sha256
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
